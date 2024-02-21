@@ -1,1 +1,18 @@
-ads
+alfabeto = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U",
+            "V", "W", "X", "Y", "Z"]
+output=[]
+# Inserir um input numerico
+numero = int(input("Digite o valor da chave: "))
+# Obter input de frase a cifrar
+frase = str(input("Digite a frase a cifrar: "))
+
+# Array para ver todas as letras da frase e cifrar consoante o numero dado, fazendo a (posicao da letra a cifrar no
+# alfabeto) - o numero obtido de forma a termos a posição da letra cifrada e devido resultado
+for letra in frase.upper():
+    if letra in alfabeto:
+        output.append(alfabeto[alfabeto.index(letra)-numero])
+    elif letra==" ":
+        output.append(" ")
+
+# Juntar todos os carateres do array do output de forma a criar a frase
+print("".join(output))
